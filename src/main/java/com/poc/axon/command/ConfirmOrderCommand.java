@@ -1,7 +1,7 @@
 
 package com.poc.axon.command;
 
-import org.axonframework.commandhandling.TargetAggregateIdentifier;
+import org.axonframework.modelling.command.TargetAggregateIdentifier;
 
 import lombok.Data;
 

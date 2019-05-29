@@ -1,6 +1,6 @@
 package com.poc.axon.models;
 
-import org.axonframework.commandhandling.TargetAggregateIdentifier;
+import org.axonframework.modelling.command.TargetAggregateIdentifier;
 import org.springframework.data.annotation.Id;
 
 import lombok.Data;

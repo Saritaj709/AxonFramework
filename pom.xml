@@ -17,6 +17,8 @@
 
 	<properties>
 		<java.version>1.8</java.version>
+		<axon.version>4.1.1</axon.version>
+		<!-- <axon.version>3.2</axon.version> -->
 	</properties>
 
 	<dependencies>
@@ -31,20 +33,31 @@
 			<scope>test</scope>
 		</dependency>
 
-		<dependency>
+		<!-- <dependency>
 			<groupId>org.axonframework</groupId>
-			<artifactId>axon-spring-boot-starter</artifactId>
+			<artifactId>axon-spring-boot-starter</artifactId>-->
 			<!--  <version>4.0.3</version>-->
-			<version>3.2</version>
-			
-		</dependency>
+			<!--  <version>${axon.version}</version>
+		</dependency> -->
+		
+		 <dependency>
+            <groupId>org.axonframework</groupId>
+            <artifactId>axon-spring-boot-starter</artifactId>
+            <version>${axon.version}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.axonframework</groupId>
+                    <artifactId>axon-server-connector</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
 
 		<!-- https://mvnrepository.com/artifact/org.axonframework/axon-mongo -->
 		<dependency>
-			<groupId>org.axonframework</groupId>
+			<groupId>org.axonframework.extensions.mongo</groupId>
 			<artifactId>axon-mongo</artifactId>
 			<!-- <version>3.3</version> -->
-			<version>3.2</version>
+			<version>${axon.version}</version>
 			
 		</dependency>
 
@@ -54,7 +67,7 @@
 			<groupId>org.axonframework</groupId>
 			<artifactId>axon-test</artifactId>
 			<!-- <version>4.0.3</version> -->
-			  <version>3.2</version>
+			  <version>${axon.version}</version>
 			<scope>test</scope>
 		</dependency>
 		<dependency>
